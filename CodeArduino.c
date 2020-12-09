@@ -80,7 +80,7 @@ void setup() {
   pinMode(pBomba, OUTPUT);                                                          //Define o pino de acionamento da Bomba como saida
   pinMode(pMisturador, OUTPUT);                                                     //Define o pino de acionamento do Misturador como saida
   pinMode(pLigaDesliga, INPUT_PULLUP);                                              //Define o pino do botao de liga/desliga como input_pullup (uso do resistor interno de pull-up, acionamento em nivel logico baixo)
-  attachInterrupt(digitalPinToInterrupt(pLigaDesliga), ligaDesliga, FALLING);       //Liga a interrupcao 1 (pino3), funcao de interrupcao ligaDesliga, em borda de subida
+  attachInterrupt(digitalPinToInterrupt(pLigaDesliga), ligaDesliga, FALLING);       //Liga a interrupcao 1 (pino2), funcao de interrupcao ligaDesliga, em borda de subida
 
   if (!sensors.getAddress(sensorSaida, 0)) {                                        //Caso nenhum sensor seja encontrado, imprime uma mensagem de erro no monitor serial
     Serial.println("Sensores nao encontrados !");
